@@ -1,0 +1,110 @@
+/* 常用 flex */
+.flx-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flx-justify-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flx-justify-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flx-align-center {
+    display: flex;
+    align-items: center;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    content: "";
+}
+
+/* 文字单行省略 */
+.single-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 文字多行省略 */
+.multi-text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+/* 文字自动換行 */
+.break-word {
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    display: block;
+    background: #fff;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8c8c8c;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ededed;
+    border-radius: 5px;
+}
+
+::selection {
+background-color: #8c8c8c;
+}
+
+/* 标签页 */
+.card--item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #0c1d1b;
+    // background: linear-gradient(135deg, #272727, #4a4a4a, #6d6d6d, #909090, #b3b3b3, #d6d6d6, #f9f9f9);
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-radius: 8px;
+    font-family: HarmonyOS_Regular;
+    transition: .3s ease;
+    &:hover {
+        transition: .3s ease;
+        box-shadow: 0 3px 6px 6px rgba(7, 17, 27, 0.15)
+    }
+}
+
+/* 文章页 */
+.article--item {
+    margin: 0 15px 30px;
+    // margin-bottom: 30px;
+    height: 18rem;
+    // background-color: #0c1d1b;
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    // border: 1px solid #898989;
+    border-radius: 8px;
+    text-align: left;
+    font-family: HarmonyOS_Regular;
+    overflow: hidden;
+}
